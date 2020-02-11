@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "627065473532",
+    "firebase_url": "https://supacombo2.firebaseio.com",
+    "project_id": "supacombo2",
+    "storage_bucket": "supacombo2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627065473532:android:b39259b67ed7dd735d0a79",
+        "android_client_info": {
+          "package_name": "com.gold.kds517.smartviewmac"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "627065473532-j3igtilmlg26l21f1515197s62jskk9p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gold.kds517.smartviewmac",
+            "certificate_hash": "efa07a70f8298b63229545142075d2b43316bb56"
+          }
+        },
+        {
+          "client_id": "627065473532-9fotqijhnainq4006atvo0691v2sknb3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBy88PYMHTSiFWPGJ7_Tlc3T3aMgauer1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "627065473532-9fotqijhnainq4006atvo0691v2sknb3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
