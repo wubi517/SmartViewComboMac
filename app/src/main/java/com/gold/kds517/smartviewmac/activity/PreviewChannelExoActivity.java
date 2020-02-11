@@ -474,6 +474,7 @@ public class PreviewChannelExoActivity extends AppCompatActivity implements  Ada
                         paint.setTypeface(Typeface.DEFAULT);
                         Rect result = new Rect();
                         paint.getTextBounds(rss_feed, 0, rss_feed.length(), result);
+                        float width = paint.measureText(rss_feed, 0, rss_feed.length());
                         if(rss.equalsIgnoreCase(rss_feed)){
                             ly_header.setVisibility(View.GONE);
 //                            image_icon.setVisibility(View.GONE);
@@ -485,9 +486,9 @@ public class PreviewChannelExoActivity extends AppCompatActivity implements  Ada
                             ly_header.setVisibility(View.VISIBLE);
                         }
 
-                        int divide = (MyApp.SCREEN_WIDTH)/Utils.dp2px(this,result.width());
+                        int divide = (MyApp.SCREEN_WIDTH)/Utils.dp2px(this,(int) width);
                         Log.e("divide",divide+"");
-                        if(divide>=1){
+                        if(divide>1){
                             if(is_msg){
                                 ly_header.setVisibility(View.VISIBLE);
                                 txt_rss.setText(rss);
@@ -503,12 +504,12 @@ public class PreviewChannelExoActivity extends AppCompatActivity implements  Ada
                                 for(int i =0;i<divide+1;i++){
                                     rss_feed += rss_feed;
                                 }
-                                Log.e("rss2",rss);
+                                Log.e("rss2",rss_feed);
 //                            txt_rss.setText(rss);
 //                            txt_rss.startAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.marquee1));
                                 txt_rss.setSelected(true);
                                 txt_rss.setEllipsize(TextUtils.TruncateAt.MARQUEE);
-                                txt_rss.setText(rss);
+                                txt_rss.setText(rss_feed);
                             }else {
                                 ly_header.setVisibility(View.GONE);
                             }
