@@ -52,6 +52,7 @@ import org.videolan.libvlc.LibVLC;
 import org.videolan.libvlc.Media;
 import org.videolan.libvlc.MediaPlayer;
 
+import java.io.File;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -107,6 +108,7 @@ public class VideoPlayActivity extends AppCompatActivity implements  SeekBar.OnS
     private static final int SURFACE_4_3 = 4;
     private static final int SURFACE_ORIGINAL = 5;
     private static int CURRENT_SIZE = SURFACE_BEST_FIT;
+    boolean is_recording = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -190,6 +192,7 @@ public class VideoPlayActivity extends AppCompatActivity implements  SeekBar.OnS
         title_txt.setText(getIntent().getStringExtra("title"));
         cont_url = getIntent().getStringExtra("url");
         title = getIntent().getStringExtra("title");
+        is_recording = getIntent().getBooleanExtra("is_recording",false);
         try {
             Picasso.with(this).load(getIntent().getStringExtra("img"))
                     .placeholder(R.drawable.icon_default)
@@ -544,7 +547,12 @@ public class VideoPlayActivity extends AppCompatActivity implements  SeekBar.OnS
 
 
             Log.e("VideoPlay",path);
-            Media m = new Media(libvlc, Uri.parse(path));
+            Media m;
+            if(is_recording){
+                m = new Media(libvlc, Uri.fromFile(new File(path)));
+            }else {
+                m = new Media(libvlc, Uri.parse(path));
+            }
             mMediaPlayer.setMedia(m);
             m.release();
             mMediaPlayer.play();
