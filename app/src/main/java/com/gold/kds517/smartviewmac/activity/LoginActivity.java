@@ -162,8 +162,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             lay_user_pass.setVisibility(View.VISIBLE);
             lay_mac.setVisibility(View.GONE);
             btn_change_mode.setText(R.string.press_here_to_login_with_mac_address);
-//            name_txt.setText("JEpPPtM5NI");
-//            pass_txt.setText("5g0Ww0gjMv");
+//            name_txt.setText("testtest0211");
+//            pass_txt.setText("pyKlbBrqHM");
         }else {
             lay_user_pass.setVisibility(View.GONE);
             lay_mac.setVisibility(View.VISIBLE);
@@ -178,6 +178,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void macLogin(String mac){
+        MyApp.is_local = true;
         is_first = true;
         btn_change_mode.setEnabled(false);
         btn_login.setEnabled(false);
