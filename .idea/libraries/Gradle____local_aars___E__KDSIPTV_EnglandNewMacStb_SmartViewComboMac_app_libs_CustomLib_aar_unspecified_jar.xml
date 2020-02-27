@@ -1,8 +1,8 @@
 <component name="libraryTable">
-  <library name="Gradle: __local_aars__:E.\KDSIPTV\EnglandNewMacStb\SmartViewComboMac\app\libs\CustomLib.aar:unspecified@jar">
+  <library name="Gradle: __local_aars__:E./KDSIPTV/EnglandNewMacStb/SmartViewComboMac/app/libs/CustomLib.aar:unspecified@jar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ecfbb1c15f33aca10adcf01c7421b968/CustomLib/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ecfbb1c15f33aca10adcf01c7421b968/CustomLib/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6236848ee8eb352d71416ee40f130c56/jetified-CustomLib/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6236848ee8eb352d71416ee40f130c56/jetified-CustomLib/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

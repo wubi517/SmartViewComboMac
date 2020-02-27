@@ -162,13 +162,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             lay_user_pass.setVisibility(View.VISIBLE);
             lay_mac.setVisibility(View.GONE);
             btn_change_mode.setText(R.string.press_here_to_login_with_mac_address);
-//            name_txt.setText("testtest0211");
-//            pass_txt.setText("pyKlbBrqHM");
+            name_txt.setText("bJgJVief3r");
+            pass_txt.setText("B8FobkKn5H");
         }else {
             lay_user_pass.setVisibility(View.GONE);
             lay_mac.setVisibility(View.VISIBLE);
             mac_address.setText(MyApp.mac_address);
-//            mac_address.setText("08:C5:E1:AE:15:E1");
+            mac_address.setText("08:C5:E1:AE:15:E1");
             btn_change_mode.setText(R.string.press_here_to_login_with_user_pass);
             if (MyApp.instance.getPreference().get(Constants.getMacAddress()) != null) {
                 checkBox.setChecked(true);
